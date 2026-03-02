@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "flatten-pdf"
+version = "0.1.0"
+description = "Flatten PDF files into image-only PDFs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.1",
+    "pymupdf>=1.27.1",
+    "rich>=14.3.3",
+]
+
+[project.scripts]
+flatten-pdf = "flatten_pdf.cli:main"
